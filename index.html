@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Austin Digital Twin</title>
+
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.105.1/Build/Cesium/Cesium.js"></script>
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.105.1/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://smartcity.tacc.utexas.edu/FireIncident/Demo3D/assets/css/fireMap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cesium-plugin/cesium-popup-es6@main/dist/cesium-popup-es6.umd.js"></script>
+  
+  
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="cesiumContainer" style="position: absolute;width: 100%;height:100%;"></div>
+
+    <div id="sidebar" class="sidebar closed">
+        <div class="header">
+            <h1 style="font-size: 1.2rem;"><i class="fas fa-city" style="margin-right: 10px;font-size: large;"></i>
+                Austin Digital Twin</h1>
+            <!-- <p>Work in progress</p> -->
+        </div>
+        <h2 style="font-size: 1.1rem;margin-bottom: 20px;">Recent Events</h2>
+        <div class="accordion" id="eventsAccordion">
+            <!-- Events will be dynamically added here -->
+        </div>
+    </div>
+    <!-- cesium map -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+    <script src="cesium.js"></script>
+
+</body>
+</html>
