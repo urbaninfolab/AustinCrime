@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+}
+
+.page-wrapper {
+    bottom: 0;
+    position: absolute;
+}
+
+.page-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.page-description {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.page-wrapper #map {
+    height: 800px;
+    width: 1400px;
+    margin-top: 10px;
+}
+
+.page-wrapper .location-info,
+.page-wrapper .crime-info {
+    padding: 5px;
+    background: #FFED86;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.page-wrapper span {
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+/* Crime marker styles */
+.crime-popup {
+    font-family: sans-serif;
+}
+
+.crime-popup .offense-type {
+    font-size: 14px;
+    font-weight: bold;
+    color: #c00;
+    margin-bottom: 5px;
+}
+
+.crime-popup .location {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.crime-popup .date-time {
+    font-size: 12px;
+    color: #666;
+}
+
