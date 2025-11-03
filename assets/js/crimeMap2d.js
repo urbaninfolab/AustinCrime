@@ -28,6 +28,10 @@ async function loadCrimeData() {
         // Create marker cluster group
         markers = L.markerClusterGroup({
             showCoverageOnHover: false,
+            maxClusterRadius: 50, // Smaller radius so markers are easier to click
+            spiderfyOnMaxZoom: true, // Expand cluster on click when zoomed in
+            zoomToBoundsOnClick: true, // Zoom to bounds when clicking cluster
+            removeOutsideVisibleBounds: true, // Performance optimization
             iconCreateFunction: function(cluster) {
                 var childCount = cluster.getChildCount();
                 return new L.DivIcon({ 
@@ -77,7 +81,17 @@ async function loadCrimeData() {
                     </div>
                 `;
                 
-                marker.bindPopup(popupContent);
+                // Bind popup to marker
+                marker.bindPopup(popupContent, {
+                    maxWidth: 300,
+                    className: 'crime-popup-container'
+                });
+                
+                // Also open popup on click to ensure it works
+                marker.on('click', function() {
+                    this.openPopup();
+                });
+                
                 markers.addLayer(marker);
                 markerCount++;
             } else {

@@ -63,3 +63,17 @@ body {
     color: #666;
 }
 
+/* Ensure popup is visible and clickable */
+.crime-popup-container {
+    z-index: 10000 !important;
+}
+
+.leaflet-popup-content-wrapper {
+    z-index: 10000 !important;
+}
+
+.leaflet-popup {
+    z-index: 10000 !important;
+    pointer-events: auto !important;
+}
+

@@ -220,6 +220,38 @@
 
 		<script src="assets/js/crimeMap2d.js"></script>
 		
+		<!-- Simple Usage Instructions Modal -->
+		<div id="usageModal" style="display: none; position: fixed; z-index: 10000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); overflow-y: auto;">
+			<div style="background-color: #bf5700; margin: 5% auto; padding: 25px; border: 1px solid #888; width: 85%; max-width: 650px; border-radius: 8px; position: relative; max-height: 85vh; overflow-y: auto; color: #fefefe;">
+				<span onclick="closeUsageModal()" style="position: absolute; right: 15px; top: 15px; color: #fefefe; font-size: 32px; font-weight: bold; cursor: pointer; line-height: 1;">&times;</span>
+				<h2 style="margin-top: 0; color: #fefefe;">Welcome to Austin Crime Map</h2>
+				<h3 style="margin-bottom: 20px; border-bottom: 2px solid #fefefe; padding-bottom: 10px; color: #fefefe;">Guide</h3>
+				
+				<div style="margin-bottom: 18px; display: flex; align-items: flex-start;">
+					<div style="color: #fefefe; text-align: left;">
+						<strong style="color: #fefefe; display: block; margin-bottom: 5px; text-align: left;">Crime Markers:</strong>
+						<span style="text-align: left;">Red markers on the map represent crime incidents. Click on any marker to view detailed information including crime type, location, date, and report number. Markers may be clustered at lower zoom levels - zoom in to see individual markers.</span>
+					</div>
+				</div>
+				
+				<div style="text-align: center; margin-top: 25px; padding-top: 20px; border-top: 1px solid rgba(254, 254, 254, 0.3);">
+					<button onclick="closeUsageModal()" style="background-color: #fefefe; color: #bf5700; border: none; padding: 12px 40px; font-size: 16px; border-radius: 5px; cursor: pointer; font-weight: bold; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#e8e8e8'" onmouseout="this.style.backgroundColor='#fefefe'">Got it!</button>
+				</div>
+			</div>
+		</div>
+		
+		<script>
+			function closeUsageModal() {
+				document.getElementById('usageModal').style.display = 'none';
+			}
+			
+			window.onload = function() {
+				setTimeout(function() {
+					document.getElementById('usageModal').style.display = 'block';
+				}, 500);
+			};
+		</script>
+		
 		<!-- Instructions for users -->
 		<!-- 
 		To fix corrupted coordinates in CrimeMap_geocoded.json:
